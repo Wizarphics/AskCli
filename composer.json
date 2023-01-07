@@ -1,0 +1,36 @@
+{
+    "name": "wizarphics/askcli",
+    "type": "library",
+    "description": "Php askcli application",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "askcli",
+        "Wizarphics",
+        "wizarframework",
+        "cli",
+        "console"
+    ],
+    "authors": [
+        {
+            "name": "Wizarphics",
+            "email": "wizarphics@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Wizarphics\\AskCli\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        },
+        "files": [
+            "tests/Helper.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

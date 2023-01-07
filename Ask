@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+if(php_sapi_name() !== 'cli'){
+    die("This script is only available via cli.");
+}
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Wizarphics\AskCli\App;
+use Wizarphics\AskCli\Command\CommandCall;
+
+$app = new App([
+    'debug' => true,
+    'app_path' => __DIR__.'/app/Command',
+    'theme' => '\Dalton'
+]);
+
+$app->setSignature("Ask hello name [ user=name ]");
+
+$app->registerCommand('help', function (CommandCall $call) use ($app) {
+    $app->printSignature();
+    print_r($call->params);
+});
+
+$app->runCommand($argv);
