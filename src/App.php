@@ -24,7 +24,7 @@ class App {
 
     protected array $loadedServices = [];
     
-    public function __construct(array $config=[], string $signature='./AskCli help') {
+    public function __construct(array $config=[], string $signature='./askcli help') {
         $config = array_merge([
             'appPath' => __DIR__ . DIRECTORY_SEPARATOR .'../app/Command',
             'theme' => '',

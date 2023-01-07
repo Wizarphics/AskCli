@@ -16,7 +16,7 @@ $app = new App([
     'theme' => '\Dalton'
 ]);
 
-$app->setSignature("Ask hello name [ user=name ]");
+$app->setSignature("ask hello name [ user=name ]");
 
 $app->registerCommand('help', function (CommandCall $call) use ($app) {
     $app->printSignature();

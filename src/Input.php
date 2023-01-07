@@ -25,7 +25,7 @@ class Input
      *
      * @param string $prompt
      */
-    public function __construct($prompt = 'AskCli$> ')
+    public function __construct($prompt = 'askcli$> ')
     {
         $this->setPrompt($prompt);
     }
